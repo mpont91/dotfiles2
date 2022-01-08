@@ -1,0 +1,15 @@
+#!/bin/sh
+
+echo "Setting up your computer...\n"
+
+sudo apt update
+sudo apt upgrade -y
+
+echo "Setting up your drivers...\n"
+
+sudo ubuntu-drivers autoinstall
+
+sh scripts/packages.sh
+sh scripts/aliases.sh
+sh scripts/git.sh
+sh scripts/ssh-keys.sh

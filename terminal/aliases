@@ -1,0 +1,39 @@
+# Shortcuts
+alias c="clear"
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
+
+# Directories
+alias projects="cd ~/Projects"
+
+# Laravel
+alias pa="php artisan"
+
+# PHP
+alias cfresh="rm -rf vendor/ composer.lock && composer install"
+
+# JS
+alias nfresh="rm -rf node_modules/ package-lock.json && npm install"
+
+# Docker
+alias dc="docker-compose"
+
+# Git
+alias gs="git status"
+alias gb="git branch"
+alias gc="git checkout"
+alias gd='git diff'
+alias gmp='git checkout master; git merge develop; git push origin master develop; git checkout develop'
+alias gl="git log --oneline --decorate --color"
+alias amend="git add . && git commit --amend --no-edit"
+alias commit="git add . && git commit"
+alias force="git push --force"
+alias nuke="git clean -df && git reset --hard"
+alias undo='git reset --soft HEAD~1'
+alias pop="git stash pop"
+alias pull="git pull"
+alias push="git push"
+alias resolve="git add . && git commit --no-edit"
+alias stash="git stash -u"
+alias unstage="git restore --staged ."
+alias wip="commit wip"
