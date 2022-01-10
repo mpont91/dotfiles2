@@ -1,15 +1,22 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-echo "Setting up your computer...\n"
+echo "🚀 Setting up your computer..."
+echo "------------------------------"
+echo
+export DOTFILES_PATH="$HOME/.dotfiles"
+echo "👉 Cloning into: '$DOTFILES_PATH'"
 
-sudo apt update
-sudo apt upgrade -y
+git --version 2>&1 >/dev/null
+GIT_IS_AVAILABLE=$?
 
-echo "Setting up your drivers...\n"
 
-sudo ubuntu-drivers autoinstall
+if [ $GIT_IS_AVAILABLE -ne 0 ]; then
+        echo "Installing git first!"
+        sudo apt -qq install git -y
+fi
 
-sh scripts/packages.sh
-sh scripts/aliases.sh
-sh scripts/git.sh
-sh scripts/ssh-keys.sh
+set -euo pipefail
+
+git clone https://github.com/slayerbleast/dotfiles.git "$DOTFILES_PATH"
+
+source "$DOTFILES_PATH/scripts/main.sh"

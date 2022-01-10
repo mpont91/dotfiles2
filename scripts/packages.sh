@@ -1,10 +1,10 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
-echo "Installing some packages...\n"
+echo "💾 Installing some packages..."
 
-sudo apt-get install -y build-essential bash curl git vim snap php composer nodejs npm
+sudo apt-get -qq install -y build-essential bash curl git vim snap php composer nodejs npm
 
-sudo npm install --global yarn
+sudo npm install --silent --global yarn
 
 sudo snap install phpstorm --classic
 sudo snap install brave
