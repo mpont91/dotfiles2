@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+echo "🚀 Setting up your computer..."
+echo "------------------------------"
+echo
+export DOTFILES_PATH="$HOME/.dotfiles"
+echo "👉 Cloning into: '$DOTFILES_PATH'"
+
+# To test that git is installed (if not macOS will prompt an installer)
+git --version
+
+source "$DOTFILES_PATH/scripts/main.sh"
+
+git clone --depth 1 https://github.com/slayerbleast/dotfiles.git "$DOTFILES_PATH"
+
+source "$DOTFILES_PATH/scripts/main.sh"
