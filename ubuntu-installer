@@ -17,6 +17,6 @@ fi
 
 set -euo pipefail
 
-git clone --depth 1 https://github.com/slayerbleast/dotfiles.git "$DOTFILES_PATH"
+git clone --depth 1 https://github.com/mpont91/dotfiles.git "$DOTFILES_PATH"
 
 source "$DOTFILES_PATH/scripts/main.sh"
