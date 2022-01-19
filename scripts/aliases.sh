@@ -2,5 +2,4 @@
 
 echo "🔗 Setting up your aliases..."
 
-cp terminal/aliases ~/.bash_aliases
-
+cp "$DOTFILES_PATH/terminal/aliases" ~/.bash_aliases

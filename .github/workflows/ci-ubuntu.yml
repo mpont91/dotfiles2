@@ -17,7 +17,5 @@ jobs:
           - ubuntu-20.04
 
     steps:
-      - uses: actions/checkout@v2
-
       - name: Install
-        run: bash scripts/ubuntu-main.sh
+        run: bash <(curl -s https://raw.githubusercontent.com/mpont91/dotfiles/master/ubuntu-installer)

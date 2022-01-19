@@ -20,7 +20,7 @@ bash scripts/ubuntu-main.sh
 
 ### Mac OS
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/mpont91/dotfiles/master/macos-installer)
+bash <(curl -s https://raw.githubusercontent.com/mpont91/dotfiles/master/mac-installer)
 ```
 
 For manually execution:

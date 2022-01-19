@@ -9,8 +9,8 @@ echo "👉 Cloning into: '$DOTFILES_PATH'"
 # To test that git is installed (if not macOS will prompt an installer)
 git --version
 
-source "$DOTFILES_PATH/scripts/main.sh"
+set -euo pipefail
 
 git clone --depth 1 https://github.com/mpont91/dotfiles.git "$DOTFILES_PATH"
 
-source "$DOTFILES_PATH/scripts/main.sh"
+source "$DOTFILES_PATH/scripts/mac-main.sh"
