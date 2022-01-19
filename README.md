@@ -11,7 +11,20 @@ Execute the [`ubuntu-installer`](ubuntu-installer) from your terminal in order t
 bash <(curl -s https://raw.githubusercontent.com/slayerbleast/dotfiles/master/ubuntu-installer)
 ```
 
+For manually execution:
+
+```bash
+bash scripts/ubuntu-main.sh
+```
+
+
 ### Mac OS
 ```bash
 bash <(curl -s https://raw.githubusercontent.com/slayerbleast/dotfiles/master/macos-installer)
+```
+
+For manually execution:
+
+```bash
+bash scripts/mac-main.sh
 ```
