@@ -20,4 +20,4 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install
-        run: bash <(curl -s https://raw.githubusercontent.com/mpont91/dotfiles/master/ubuntu-installer)
+        run: bash scripts/ubuntu-main.sh
