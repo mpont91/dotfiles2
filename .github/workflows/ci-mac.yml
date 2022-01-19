@@ -1,0 +1,23 @@
+name: CI-Ubuntu
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  build:
+    name: 🚀 Build
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os:
+          - macos-10.15
+          - macos-11.0
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install
+        run: bash <(curl -s https://raw.githubusercontent.com/mpont91/dotfiles/master/macos-installer)
